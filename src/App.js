@@ -1,0 +1,35 @@
+import React, { Component } from 'react';
+import './App.css';
+import RefsExample from './components/RefsExample'
+//import Generator from './components/Generators';
+//import LetConstVarExample from './components/LetConstVarExamples';
+//import {A,B} from './components/ClassA';
+//import { SetExample,MapExample,WeakSetExample } from './components/SetAndMap';
+//import {BasicExpect} from './redux/components/BasicExpect';
+//import ReduxExample1 from './redux/components/ReduxExample1';
+//import {testAddCounter} from './redux/components/AvoidingMutation';
+import {TodoApp,Render} from './components/TodoApp/TodoApp';
+
+
+class App extends Component {
+  render() {
+    // testAddCounter();
+    //Counter();
+    // console.log(SetExample());
+    // console.log(MapExample());
+    // console.log(WeakSetExample());
+    //LetConstVarExample();
+   // console.log(A.staticVariableInB);
+   // console.log(B.staticVariableInB);
+    return (
+      <div>
+        {/* <ReduxExample1 /> */}
+       {/* <RefsExample /> */}
+       {/* <Generator /> */}
+       {/* <LetConstVarExample /> */}
+       <Render />
+      </div>
+    );
+  }
+}
+export default App;
