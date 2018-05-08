@@ -19,7 +19,6 @@ const todo = (state,action) => {
 	}
 }
 
-
 const todos = (state=[],action) => {
 	switch(action.type){
 		case "ADD_TODO":
@@ -48,10 +47,8 @@ const visibilityFilter = (
 	}
 }
 
-const todoApp = combineReducers({
+export const todoApp = combineReducers({
 	todos,
 	visibilityFilter
 });
-
 export const store=createStore(todoApp);
-//console.log(store.getState());

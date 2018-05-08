@@ -1,36 +1,37 @@
 import React,{Component} from 'react';
+import {Provider,connect} from 'react-redux';
 import Reducers,{store} from './Reducers';
 
-export const  TodoApp = (props) => {
-	console.log(props);
-	const changeHandler = () => {
+
+export default class TodoApp {
+
+	constructor(props){
+		super();
+		this.state={
+			value:null,
+		}
+	}
+
+	changeHandler = () => {
 	console.log(this.inputValue.value);
 	store.dispatch({
-type:"ADD_TODO",
-id:0,
-text: this.inputValue.value,
-	})
+	type:"ADD_TODO",
+	id:0,
+	text: this.inputValue.value,
+	});
 }
 
-console.log(store.getState());
-return(
-	<div>
-	<input type="text" ref={(node) => {this.inputValue = node }} />
-	<button onClick={changeHandler}>AddTodo</button>
-	<ul>
-		{/* {props.data.map(data => <li>{data.text}</li>)} */}
-	</ul>
-	<ul>
-	</ul>
-	</div>
-);
+render(){
+	return(
+		<div>
+		<input type="text" ref={(node) => {this.inputValue = node }} />
+		<button onClick={changeHandler}>AddTodo</button>
+		<ul>
+			{/* {props.data.map(data => <li>{data.text}</li>)} */}
+		</ul>
+		<ul>
+		</ul>
+		</div>
+	);
 }
-
-export	const Render = () => {
-		console.log(store.getState());
-		//let inputValue=null;
-		return (
-		<TodoApp data={store.getState().todos} />
-		);
-	}
-	store.subscribe(Render);
+}

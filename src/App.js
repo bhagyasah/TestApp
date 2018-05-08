@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Provider} from 'react-redux';
 import './App.css';
 import RefsExample from './components/RefsExample'
 //import Generator from './components/Generators';
@@ -8,7 +9,8 @@ import RefsExample from './components/RefsExample'
 //import {BasicExpect} from './redux/components/BasicExpect';
 //import ReduxExample1 from './redux/components/ReduxExample1';
 //import {testAddCounter} from './redux/components/AvoidingMutation';
-import {TodoApp,Render} from './components/TodoApp/TodoApp';
+import {createStore,combineReducers} from 'redux';
+import TodoApp from './components/TodoApp/TodoApp';
 
 
 class App extends Component {
@@ -23,11 +25,9 @@ class App extends Component {
    // console.log(B.staticVariableInB);
     return (
       <div>
-        {/* <ReduxExample1 /> */}
-       {/* <RefsExample /> */}
-       {/* <Generator /> */}
-       {/* <LetConstVarExample /> */}
-       <Render />
+    <Provider store={combineReducers()}>
+     <TodoApp />
+      </Provider>
       </div>
     );
   }

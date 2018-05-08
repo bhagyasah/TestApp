@@ -1,7 +1,7 @@
 var printer = require("node-thermal-printer");
 printer.init({
   type: 'epson',
-  interface: '/dev/usb/lp0'
+  interface: 'COM1'
 });
 //console.log(printer.isPrinterConnected());
 printer.alignCenter();
