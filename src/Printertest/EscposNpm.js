@@ -11,6 +11,5 @@ const printer = new escpos.Printer(device, options);
 device.open(function(e){
   console.log("open function called", e);
   printer.text('Hello World').flush();
-  printer.text("fjsakdfjlasjdflkas");
   device.close();
 });
