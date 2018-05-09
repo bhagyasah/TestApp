@@ -1,7 +1,8 @@
 var printer = require("node-thermal-printer");
+var printerP = require('printer');
 printer.init({
   type: 'epson',
-  interface: 'COM1'
+  interface: '/dev/usb/lp0'
 });
 //console.log(printer.isPrinterConnected());
 printer.alignCenter();
@@ -44,4 +45,17 @@ printer.execute(err => {
      console.log("Print done");
     }
 } );
+
+printerP.printDirect({
+  data: printer.getBuffer(),
+  type: 'RAW',
+  success: function (id)
+  {
+      console.log("Printer ID: ", id)
+  },
+  error: function (err)
+  {
+      console.log(err)
+  }
+})
 
