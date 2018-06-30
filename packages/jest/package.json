@@ -1,0 +1,10 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Bhagya",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^23.2.0"
+  }
+}
