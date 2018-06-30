@@ -3,10 +3,9 @@ import {Provider,connect} from 'react-redux';
 import Reducers,{store} from './Reducers';
 
 
-export default class TodoApp {
-
+export default class TodoApp extends Component {
 	constructor(props){
-		super();
+		super(props);
 		this.state={
 			value:null,
 		}

@@ -45,17 +45,18 @@ printer.execute(err => {
      console.log("Print done");
     }
 } );
+//console.log(printer.getBuffer());
 
-printerP.printDirect({
-  data: printer.getBuffer(),
-  type: 'RAW',
-  success: function (id)
-  {
-      console.log("Printer ID: ", id)
-  },
-  error: function (err)
-  {
-      console.log(err)
-  }
-})
+// printerP.printDirect({
+//   data: printer.getBuffer(),
+//   type: 'RAW',
+//   success: function (id)
+//   {
+//       console.log("Printer ID: ", id)
+//   },
+//   error: function (err)
+//   {
+//       console.error("printer p error",err)
+//   }
+// })
 

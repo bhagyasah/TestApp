@@ -10,7 +10,8 @@ import RefsExample from './components/RefsExample'
 //import ReduxExample1 from './redux/components/ReduxExample1';
 //import {testAddCounter} from './redux/components/AvoidingMutation';
 import {createStore,combineReducers} from 'redux';
-import TodoApp from './components/TodoApp/TodoApp';
+// import TodoApp from './components/TodoApp/TodoApp';
+import TravlingSalseProplem,{test} from './travlingSalsePerson';
 
 
 class App extends Component {
@@ -25,9 +26,10 @@ class App extends Component {
    // console.log(B.staticVariableInB);
     return (
       <div>
-    <Provider store={combineReducers()}>
-     <TodoApp />
-      </Provider>
+    {/* <Provider store={combineReducers()}> */}
+     {/* <TodoApp /> */}
+     <TravlingSalseProplem />
+      {/* </Provider> */}
       </div>
     );
   }
